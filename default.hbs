@@ -13,34 +13,28 @@
   <link href="{{asset 'css/style.css'}}" rel="stylesheet" />
   <link href="{{asset 'css/colors-dark.css'}}" rel="stylesheet" />
 
+<link rel="shortcut icon" href="{{asset "/images/octopus-header.png"}}">
+
   {{ghost_head}}
 
 </head>
 
-<body class="{{body_class}}">
+<!-- Theme Colors
+#152934; #1f313b; #2aa198; #cb4b16; #839496; -->
 
-
-<!-- Not needed for my version of theme
-  {{#if @blog.cover}}
-    <div id="coverimg" style="background-image: url({{@blog.cover}})"></div>
-  {{/if}}
--->
+<body class="{{body_class}} page-top-border">
 
 
   <header id="header">
-    {{#if @blog.logo}}
-      <a id="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" /></a>
-    {{else}}
-      <h1><a href="{{@blog.url}}">_ {{@blog.title}}</a></h1>
-    {{/if}}
-    <p>{{@blog.description}}</p>
+      <h1>
+      <a target="_blank" href="https://duckduckgo.com/?q=engraving+of+octopus&t=ffab&iar=images&iax=1&ia=images">
+      <img id="header-image" src="{{asset 'images/octopus-header.png'}}" />
+      </a>
+      <a href="http://marcusskye.com/">@MARCUSSKYE | BLOG</a>
+      </h1>
   </header>
 
-
-
   <div id="page">
-
-
 
     <div id="sidebar" >
 
@@ -49,8 +43,9 @@
           <li><a href="{{@blog.url}}">Home</a></li>
           <li><a href="http://github.com/hebrides">GitHub</a></li>
           <li><a href="{{@blog.url}}/rss/">RSS Feed</a></li>
-	  <li><a href="{{@blog.url}}/services/">Services</a></li> 
-<!-- <li><a href="{{@blog.url}}/shared/my_resume.html">Resume</a></li> -->
+          <li><a href="{{@blog.url}}/draw">Art & Such</a></li>
+          <li><a href="{{@blog.url}}/about">About Marcus</a></li>
+	  <li><a href="{{@blog.url}}/services/">For Hire</a></li> 
         </ul>
       </nav>
 
@@ -62,27 +57,9 @@
        }
     
     </style>
-
-<!-- Not need for my version of this theme
-      {{#post}}
-      {{#if author}}
-        <div class="bio">
-          <img class="avatar" src="{{author.image}}" />
-          <h3>{{author.name}}</h3>
-          <p>{{author.bio}}</p>
-        </div>
-      {{/if}}
-      {{/post}}
--->
-
-
-   
-
+ 
 
     </div><!-- end sidebar -->
-
-
-
 
 
     <div id="content">
@@ -106,7 +83,7 @@
 
 
   <footer id="footer">  
-    <p class="copyright">Copyright &copy; {{date format="YYYY"}} <a href="http://www.smgmobile.com">MARCUS SKYE LEWIS.</a> 
+    <p class="copyright">Copyright &copy; {{date format="YYYY"}} <a href="http://www.marcusskye.com">⛵ MARCUS THOMAS (SKYE) LEWIS.</a> 
     Powered by <a href="http://ghost.org">Ghost</a>, Theme modified from Solar by 
     <a href="http://www.webmaster-source.com/2013/10/17/solar-theme-for-ghost-blogs/">Matt Harzewski</a></p>
   </footer>
@@ -116,14 +93,12 @@
 
   {{ghost_foot}}
 
-  <script src="{{asset 'js/jquery.mobilemenu.min.js'}}"></script>
-  <script src="{{asset 'js/prism.js'}}"></script>
+  <script src="https://marcusskye.com{{asset 'js/jquery.mobilemenu.min.js'}}"></script>
+  <script src="https://marcusskye.com{{asset 'js/prism.js'}}"></script>
   <script>
     $(document).ready(function(){
       $('#sidebar nav ul').mobileMenu({'topOptionText': 'Menu', 'prependTo': '#sidebar nav'});
     
-     /*  var now = new Date();
-         document.getElementById('year').innerHTML = now.getFullYear(); */
     });    
   </script>
 
